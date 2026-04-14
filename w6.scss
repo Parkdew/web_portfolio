@@ -1,0 +1,144 @@
+body {
+    font-family: 'Inter', sans-serif; // 본문 글꼴(Inter 우선, 없으면 산세리프)
+    padding: 0px; // 안쪽 여백 제거
+    margin: 0px; // 바깥 여백 제거
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+}
+
+ul,
+li {
+    list-style: none; // 목록 기호(점·숫자) 숨김
+    margin: 0px; // 바깥 여백 제거
+    padding: 0px; // 안쪽 여백 제거
+}
+
+
+.header{
+    position: fixed;
+    left:30px;
+    top:20px;
+    right:30px;
+    display:flex;
+    justify-content: space-between;
+    .main_menu{
+        display:flex;
+        font-size:22px;
+        font-weight:500;
+        gap:40px;
+        text-transform: uppercase;
+    }
+    .mobile_menu{
+        display:none;
+    }
+}
+
+.main{
+    .main_copy{
+        font-size:5.3vw;
+        line-height: 5.1vw;
+        padding-left:30px;
+        padding-top:170px;
+        box-sizing: border-box;
+        .space_t{
+            display:inline-block;
+            width:10vw;
+        }
+    }
+    .company_info_items{
+        display:flex;
+        justify-content: space-between;
+        font-size:24px;
+        line-height: 40px;
+        font-weight:500;
+        padding-left:30px;
+        padding-right:30px;
+        box-sizing: border-box;
+        text-transform: uppercase;
+        margin-top:124px;
+        .company_info_container{
+            display:flex;
+            gap:100px;
+        }
+
+    }
+    .main_img{
+        margin-top:15px;
+        background-image: url("./img/back_img.jpg");
+        height:1000px;
+        background-size: cover;
+        padding-left:30px;
+        box-sizing: border-box;
+        padding-top:30px;
+        .sub_copy{
+            color:#ffffff;
+            font-size:18px;
+            line-height: 24px;
+            width:510px;
+            word-break: keep-all;
+           
+
+          
+        }
+    }
+}
+
+
+
+
+@media(max-width:600px){
+
+    .header{
+        left:15px;
+        top:11px;
+        right:15px;
+        .logo_section{
+            img{
+                width:66px;
+            }
+        }
+        .main_menu{
+            display:none;
+        }
+        .mobile_menu{
+            font-size:15px;
+            font-weight:500;
+            background: transparent;
+            padding:0px;
+            border:none;
+            display:block;
+            
+
+        }
+    }
+    .main{
+        .main_copy{
+            padding-top:103px;
+            padding-left:15px;
+            .space_t{
+                width:6vw;
+            }
+        }
+        .company_info_items{
+            padding-left:15px;
+            padding-right:15px;
+            font-size:15px;
+            margin-top:33px;
+            .company_info_container{
+                gap:18px;
+            }
+        }
+        .main_img{
+            padding-left:15px;
+            padding-top:15px;
+            padding-right:15px;
+           .sub_copy{
+            font-size:14px;
+            line-height: 19px;
+            width:100%;
+           }
+        }
+    }
+
+
+}
